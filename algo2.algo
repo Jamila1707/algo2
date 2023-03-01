@@ -1,0 +1,56 @@
+ALGORITHM Sum-elements
+VAR
+    Find: BOOLEAN
+    i,j,Sum,nbr:INTEGER
+    set1,set2 : ARRAY_OF INTEGER;
+BEGIN
+    write ("ecrire les nbres des élements de tableau")
+    read(nbr)
+ FOR i FROM 0 TO 4 STEP 1  DO
+    Find=false
+    FOR j FROM 0 TO 4 STEP 1  DO
+    IF ( set1[i]=set2[j] ) THEN
+    Find=True
+    Break;
+    ELSE
+    Find=false
+    END_IF
+    END_FOR
+    IF (Find=false) THEN
+        Sum=Sum+set1[i]
+    END_IF
+ END_FOR
+ FOR i FROM 0 TO 4 STEP 1  DO
+    Find=false
+    FOR j FROM 0 TO 4 STEP 1  DO
+    IF ( set2[i]=set1[j] ) THEN
+    Find=True
+    Break;
+    ELSE
+    Find=false
+    END_IF
+    END_FOR
+    IF (Find=false) THEN
+        Sum=Sum+set2[i]
+    END_IF
+ END_FOR
+END
+
+
+FUNCTION dot-produit(v1,v2: ARRAY_OF INTEGER) : INTEGER
+VAR
+    P: INTEGER
+BEGIN
+    P= v[0]*v'[0]+v1[1]*v1'[01+v2[2]*v2'[2]
+    RETURN P ;
+END
+
+ALGORITHM produit
+VAR
+    v,v' : ARRAY_OF INTEGER[length];
+BEGIN
+    FN= "dot-produit (v,v')"
+    IF (FN=0) THEN
+        write ("les vecteurs sont perpendiculaire")
+    END_IF
+END
